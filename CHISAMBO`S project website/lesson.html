@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lesson - Intro to HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="lessons">
+    <nav class="navbar">
+        <ul>
+            <li><a class="nav-btn" href="INDEX.HTML.html"><span class="icon">🏠</span> Home</a></li>
+            <li><a class="nav-btn" href="courses.html"><span class="icon">📚</span> Courses</a></li>
+            <li><a class="nav-btn" href="inspiration.html"><span class="icon">🎨</span> Inspiration</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1 data-i18n="lesson.title">Intro to HTML</h1>
+        <p>
+            The term HTML stands for hypertext markup language, which is the most stanfdard mark up language for creating web pages and is the most basic among all forms coding languages used in web development 
+            
+        </p>
+        <section>
+            <h2>Example</h2>
+            <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;Hello&lt;/body&gt;
+&lt;/html&gt;</pre>
+        </section>
+
+        <section>
+            <h2>Quick Quiz</h2>
+            <p>Which tag contains the visible page content?</p>
+            <button onclick="checkAnswer('body')">A: &lt;body&gt;</button>
+            <button onclick="checkAnswer('head')">B: &lt;head&gt;</button>
+            <p id="quiz-result" style="margin-top:.5rem"></p>
+        </section>
+    </main>
+
+    <footer class="site-footer" data-i18n="footer.text">iwd2026</footer>
+    <script src="script.js"></script>
+</body>
+</html>

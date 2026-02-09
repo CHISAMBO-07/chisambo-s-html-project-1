@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CSS Basics — Beginner's Guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  </style>
+</head>
+<body class="css">
+
+  <nav class="navbar">
+    <ul>
+      <li><a class="nav-btn" href="INDEX.HTML.html"><span class="icon">🏠</span> Home</a></li>
+      <li><a class="nav-btn" href="courses.html"><span class="icon">📚</span> Courses</a></li>
+      <li><a class="nav-btn" href="inspiration.html"><span class="icon">🎨</span> Inspiration</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1 data-i18n="css.title">CSS Basics</h1>
+
+    <section>
+      <h2>What is CSS?</h2>
+      <p>CSS (Cascading Style Sheets) controls the visual appearance of web pages. It styles HTML elements with colors, fonts, layouts, and more.</p>
+    </section>
+
+    <section>
+      <h2>Semantic Tags</h2>
+      <p>Semantic tags are HTML elements that convey meaning about their content, in other words , they help describe the structure and meaning of content . — for example <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code>. They improve accessibility and SEO, and make styling clearer because you can target elements that describe their purpose.</p>
+    </section>
+
+    <section>
+      <h2>THREE WAYS TO STYLE WITH CSS </h2>
+      <ol>
+        <li><strong>Inline CSS:</strong> directly in an element's <code>style</code> attribute.</li>
+        <li><strong>Internal CSS:</strong> in a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code>.</li>
+        <li><strong>External CSS:</strong> in a separate <code>.css</code> file (recommended).</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>SELECTORS</h2>
+      <p>CSS selectors target HTML elements:</p>
+      <pre>/* Element selector */
+p { color: blue; }
+
+/* Class selector */
+.box { background: yellow; }
+
+/* ID selector */
+#header { font-size: 2rem; }
+
+/* Universal selector */
+* { margin: 0; }
+
+/* Attribute selector */
+input[type="text"] { border: 1px solid gray; }</pre>
+    </section>
+
+    <section>
+      <h2>COLORS SCHEMES  </h2>
+      <pre>/* Text color */
+h1 
+
+/* Background color */
+body { background-color: #f4f7fb; }
+
+/* Background image */
+div { background-image: url('bg.jpg'); }
+
+/* Gradient */
+header { background: linear-gradient(to right, #2b6df8, #10b981); }</pre>
+    </section>
+
+    <section>
+      <h2>TYPOGRAPHY</h2>
+      <p>Typography controls font, size, spacing, and text layout. Examples:</p>
+      <pre>/* Base paragraph */
+p { font-family: Arial, sans-serif; font-size: 1rem; line-height: 1.6; color: #222; }
+
+/* Headings */
+h1 { font-size: 2.25rem; font-weight: 700; line-height: 1.1; }
+h2 { font-size: 1.75rem; font-weight: 600; }
+
+/* Relative units (rem/em) */
+html { font-size: 100%; } /* typically 16px */
+small { font-size: 0.875rem; }
+
+/* Responsive heading with clamp() */
+h1.responsive { font-size: clamp(1.5rem, 2.5vw, 2.5rem); }
+
+/* Importing a web font (example) */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); */
+/* body { font-family: 'Inter', system-ui, sans-serif; } */
+
+/* Utility for readable measure */
+.measure { max-width: 60ch; }</pre>
+
+      <div class="css-example">
+        <h1 class="responsive">Responsive Heading</h1>
+        <p class="measure">This paragraph uses the <code>measure</code> utility for optimal line length and demonstrates base font sizing.</p>
+        <small>Fine print example with smaller size.</small>
+      </div>
+
+      <h3>HTML example</h3>
+      <pre>&lt;!-- HTML structure example --&gt;
+&lt;header&gt;
+  &lt;h1 class=&quot;responsive&quot;&gt;Site Title&lt;/h1&gt;
+&lt;/header&gt;
+&lt;main class=&quot;container measure&quot;&gt;
+  &lt;p&gt;This is a paragraph demonstrating readable measure and base styles.&lt;/p&gt;
+  &lt;small&gt;Caption text or fine print.&lt;/small&gt;
+&lt;/main&gt;</pre>
+    </section>
+
+    <section>
+      <h2>Box Model</h2>
+      <p>Every element has margin, border, padding, and content:</p>
+      <pre>div {
+  margin: 10px;      /* outside space */
+  border: 2px solid #333;
+  padding: 15px;     /* inside space */
+  width: 200px;
+  height: 100px;
+}</pre>
+    </section>
+
+    <section>
+      <h2>Flexbox Layout</h2>
+      <p>Use flexbox to arrange items in a row or column:</p>
+      <pre>.container {
+  display: flex;
+  justify-content: space-between;  /* horizontal */
+  align-items: center;             /* vertical */
+  gap: 1rem;
+}
+
+.item { flex: 1; }</pre>
+    </section>
+
+    <section>
+      <h2>Grid Layout</h2>
+      <p>Use grid for complex 2D layouts:</p>
+      <pre>.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+}
+
+.grid-item { grid-column: 1 / 3; }</pre>
+    </section>
+
+    <section>
+      <h2>Positioning</h2>
+      <pre>/* Static (default) */
+div { position: static; }
+
+/* Relative to normal position */
+div { position: relative; top: 10px; }
+
+/* Fixed to viewport */
+nav { position: fixed; top: 0; }
+
+/* Absolute within parent */
+div { position: absolute; left: 50px; }</pre>
+    </section>
+
+    <section>
+      <h2>Transitions and Transforms</h2>
+      <pre>button {
+  background: blue;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: darkblue;
+  transform: scale(1.05);
+}</pre>
+    </section>
+
+    <section>
+      <h2>Pseudo-classes</h2>
+      <pre>/* Link states */
+a:hover { color: red; }
+a:visited { color: purple; }
+
+/* Form states */
+input:focus { border-color: blue; }
+button:active { opacity: 0.8; }
+
+/* Structural */
+li:first-child { font-weight: bold; }
+p:nth-child(2) { color: gray; }</pre>
+    </section>
+
+    <section>
+      <h2>Media Queries (Responsive)</h2>
+      <pre>/* Desktop styles */
+.container { width: 1200px; }
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .container { width: 100%; }
+  .card { flex-direction: column; }
+}</pre>
+    </section>
+
+    <section>
+      <h2>Exercises</h2>
+      <ol>
+        <li>Style a simple card with background, border, padding, and shadow.</li>
+        <li>Create a flexbox navbar with centered items.</li>
+        <li>Build a responsive grid layout that stacks on mobile.</li>
+        <li>Add hover effects to buttons and links.</li>
+        <li>Use CSS variables (<code>--color: red;</code>) for reusable values.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Further resources</h2>
+      <p>Next: explore advanced CSS (animations, custom properties), preprocessors (Sass), and frameworks (Tailwind). See the <a href="basics.html">HTML basics</a> and <a href="javascript.html">JavaScript</a> courses.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" data-i18n="footer.text">Chisambo`s web development for begineers iwd.icu.2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>

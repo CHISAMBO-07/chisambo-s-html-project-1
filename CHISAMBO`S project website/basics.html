@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Basics of HTML — Beginner's Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="basics">
+  <nav class="navbar">
+    <ul>
+      <li><a class="nav-btn" href="INDEX.HTML.html"><span class="icon">🏠</span> Home</a></li>
+      <li><a class="nav-btn" href="courses.html"><span class="icon">📚</span> Courses</a></li>
+      <li><a class="nav-btn" href="inspiration.html"><span class="icon">🎨</span> Inspiration</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+  <h1 data-i18n="basics.title">Basics of HTML</h1>
+
+    <section>
+      <h2>What is HTML?</h2>
+      <p>HTML (HyperText Markup Language) provides the structure of web pages using elements (tags). Browsers read HTML and render the page.</p>
+    </section>
+
+    <section>
+      <h2>Document structure</h2>
+      <p>A minimal HTML document:</p>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Page title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section>
+      <h2>Common elements</h2>
+      <ul>
+        <li><strong>Headings:</strong> &lt;h1&gt; — &lt;h6&gt;</li>
+        <li><strong>Paragraph:</strong> &lt;p&gt;</li>
+        <li><strong>Links:</strong> &lt;a href="..."&gt;link&lt;/a&gt;</li>
+        <li><strong>Images:</strong> &lt;img src="..." alt="..."&gt;</li>
+        <li><strong>Lists:</strong> &lt;ul&gt; / &lt;ol&gt; and &lt;li&gt;</li>
+        <li><strong>Forms:</strong> &lt;form&gt;, &lt;input&gt;, &lt;label&gt;, &lt;button&gt;</li>
+        <li><strong>Sections:</strong> &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;nav&gt;, &lt;footer&gt;</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Attributes</h2>
+      <p>Elements can have attributes that provide extra information. Example:</p>
+      <pre>&lt;a href="https://example.com" target="_blank"&gt;Visit example&lt;/a&gt;</pre>
+    </section>
+
+    <section>
+      <h2>Images</h2>
+      <p>Always include an <em>alt</em> attribute for accessibility:</p>
+      <pre>&lt;img src="cat.jpg" alt="A small cat sitting on a chair"&gt;</pre>
+    </section>
+
+    <section>
+      <h2>Lists</h2>
+      <p>Unordered and ordered lists:</p>
+      <pre>&lt;ul&gt;
+  &lt;li&gt;Item one&lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;</pre>
+    </section>
+
+    <section>
+      <h2>Tables</h2>
+      <pre>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Score&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Afa&lt;/td&gt;&lt;td&gt;95&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+    </section>
+
+    <section>
+      <h2>Forms</h2>
+      <p>Collect user input with forms:</p>
+      <pre>&lt;form action="/submit" method="post"&gt;
+  &lt;label&gt;Name&lt;input name="name" type="text"&gt;&lt;/label&gt;
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</pre>
+    </section>
+
+    <section>
+      <h2>Semantic elements</h2>
+      <p>Use semantic tags to describe meaning: &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt;.</p>
+    </section>
+
+    <section>
+      <h2>Inline vs block</h2>
+      <p>Block elements (like &lt;div&gt;, &lt;p&gt;) start on a new line. Inline elements (like &lt;span&gt;, &lt;a&gt;) flow within a line.</p>
+    </section>
+
+    <section>
+      <h2>Example: small page</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;title&gt;Demo&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My page&lt;/h1&gt;
+    &lt;p&gt;This is a simple paragraph with a &lt;a href="#"&gt;link&lt;/a&gt;.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section>
+      <h2>Exercises</h2>
+      <ol>
+        <li>Create a simple page with an image and two links.</li>
+        <li>Build a contact form with name and email fields.</li>
+        <li>Make an ordered list of three learning goals.</li>
+        <li>create an E-learning website used to teach  </li>
+      </ol>
+    </section>
+
+    <h2>BUTTONS </h2>
+    <P>A button acts liea gateway towards other parts or pages of the website created  </P>
+<button class> DEMO BUTTTON </button>
+    <section>
+      <h2>Further steps</h2>
+      <p>Next: learn CSS for styling and JavaScript for interactivity. See the <a href="lesson.html">lesson template</a> and <a href="courses.html">other courses</a>.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" data-i18n="footer.text">iwd2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>

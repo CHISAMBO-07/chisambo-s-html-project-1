@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JavaScript Fundamentals</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a class="nav-btn" href="INDEX.HTML.html"><span class="icon">🏠</span> Home</a></li>
+      <li><a class="nav-btn" href="courses.html"><span class="icon">📚</span> Courses</a></li>
+      <li><a class="nav-btn" href="inspiration.html"><span class="icon">🎨</span> Inspiration</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+  <h1 data-i18n="javascript.title">JavaScript Fundamentals</h1>
+
+    <section>
+      <h2>What is JavaScript</h2>
+      <p>JavaScript is the programming language that adds interactivity to web pages. It runs in the browser and can modify HTML and CSS dynamically.</p>
+    </section>
+
+    <section>
+      <h2>Basic concepts</h2>
+      <ul>
+        <li><strong>Variables:</strong> store data using <code>let</code>, <code>const</code>.</li>
+        <li><strong>Functions:</strong> reusable blocks of code.</li>
+        <li><strong>Events:</strong> respond to user actions like clicks.</li>
+        <li><strong>DOM:</strong> the page structure that JavaScript can read and change.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Interactive example</h2>
+      <p>Click the button to increment the counter:</p>
+      <div style="display:flex;gap:1rem;align-items:center">
+        <button id="incBtn" class="btn">Increment</button>
+        <div id="count" style="font-weight:700">0</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Try it exercises</h2>
+      <ol>
+        <li>Create a function that reverses a string.</li>
+        <li>Make a small form and show the submitted values on the page.</li>
+        <li>Use <code>setinterval</code> to build a simple clock.</li>
+      </ol>
+    </section>
+  </main>
+
+  
+  <script>
+    // Simple counter behaviour for the example//
+    (function(){
+      const btn = document.getElementById('incBtn');
+      const display = document.getElementById('count');
+      let n = 0;
+      btn.addEventListener('click', ()=>{ n++; display.textContent = n; });
+    })();
+  </script>
+</body>
+<footer>Chisambo`s web development for begineers iwd.icu.2026</footer>
+</html>
